@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Felipe's wonderful, whimsical, whacky website (about) the web</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      emailAddresses = [
+        "felipecocco@gmail.com",
+        "28asadams@ecfs.org",
+        "28aarroyo@ecfs.org",
+        "28lgatluri@ecfs.org",
+        "28gsayestas@ecfs.org",
+        "28apboonswang@ecfs.org",
+        "28alcarter@ecfs.org",
+        "28ilfluker@ecfs.org",
+        "28ligrossberg@ecfs.org",
+        "28bchoppy@ecfs.org",
+        "28wkimafidon@ecfs.org",
+        "28cmkanner@ecfs.org",
+        "28akapoor@ecfs.org",
+        "28lckaufman@ecfs.org",
+        "28sekoons@ecfs.org",
+        "28atkremnev@ecfs.org",
+        "28ealin@ecfs.org",
+        "28iliu@ecfs.org",
+        "28csnaik@ecfs.org",
+        "28sjnewman@ecfs.org",
+        "28lanochomovitz@ecfs.org",
+        "28bkputs@ecfs.org",
+        "28irezbaev@ecfs.org",
+        "28wbsamuels@ecfs.org",
+        "28svvonmoltke@ecfs.org",
+        "28mtabrams@ecfs.org",
+        "28dsalschuler@ecfs.org",
+        "28plbarton@ecfs.org",
+        "28ambernstein@ecfs.org",
+        "28bgcalderon@ecfs.org",
+        "28sjcamara@ecfs.org",
+        "28bcynn@ecfs.org",
+        "28qcynn@ecfs.org",
+        "28zodaniel@ecfs.org",
+        "28lcdolin@ecfs.org",
+        "28jjgasca@ecfs.org",
+        "28tigreenfield@ecfs.org",
+        "28pmhults@ecfs.org",
+        "28msjones@ecfs.org",
+        "28mmkawaja@ecfs.org",
+        "28lfloconte@ecfs.org",
+        "28lglung@ecfs.org",
+        "28zcnewkirk@ecfs.org",
+        "28eeramirez@ecfs.org",
+        "28jhsands@ecfs.org",
+        "28cmsarraf-mueller@ecfs.org",
+        "28ocsymons@ecfs.org",
+        "28mathompson@ecfs.org",
+        "28mcworth@ecfs.org",
+        "29baberke@ecfs.org",
+        "29lbilimer@ecfs.org",
+        "29kpcastillo@ecfs.org",
+        "29aldehgan@ecfs.org",
+        "29ldomescik@ecfs.org",
+        "29nmdunham@ecfs.org",
+        "29wlfurlonge@ecfs.org",
+        "29rrharper@ecfs.org",
+        "29cbheld@ecfs.org",
+        "29fislam@ecfs.org",
+        "29jhmoore@ecfs.org",
+        "29kdnewell@ecfs.org",
+        "29lnurick@ecfs.org",
+        "29gaopler@ecfs.org",
+        "29jjpapino-wood@ecfs.org",
+        "29akpatel@ecfs.org",
+        "29tpollitt@ecfs.org",
+        "29alremedios@ecfs.org",
+        "29wsschneiderman-hordell@ecfs.org",
+        "29lsuleman@ecfs.org",
+        "29bpvaughan@ecfs.org",
+        "29aswright@ecfs.org",
+        "29lgyurman@ecfs.org",
+        "29amanderson@ecfs.org",
+        "29ebangarita@ecfs.org",
+        "29ajfiroozi@ecfs.org",
+        "29ggargano@ecfs.org",
+        "29azgordon@ecfs.org",
+        "29nagraham@ecfs.org",
+        "29ikgreen@ecfs.org",
+        "29jsgreenberg@ecfs.org",
+        "29wrgroves@ecfs.org",
+        "29himehretu-rankin@ecfs.org",
+        "29crouimet@ecfs.org",
+        "29jaratchford@ecfs.org",
+        "29mqrenner@ecfs.org",
+        "29orosenblum@ecfs.org",
+        "29esruiz@ecfs.org",
+        "29abschaffer@ecfs.org",
+        "29slschaffer@ecfs.org",
+        "29sseren@ecfs.org",
+        "29bdshaftel@ecfs.org",
+        "29rhtassler@ecfs.org",
+        "29jdtom@ecfs.org",
+        "29djtucker@ecfs.org",
+        "29mdvlassis@ecfs.org",
+        "29zjwinley@ecfs.org",
+                ];
+
+      var people = {};
+
+      people["felipecocco@gmail.com"] = "Felipe"
+       people["28asadams@ecfs.org"] = "Alex"
+       people["28aarroyo@ecfs.org"] = "Ana"
+       people["28lgatluri@ecfs.org"] = "Lokan"
+       people["28gsayestas@ecfs.org"] = "Gabi"
+       people["28apboonswang@ecfs.org"] = "Anais"
+       people["28alcarter@ecfs.org"] = "Ava"
+       people["28ilfluker@ecfs.org"] = "Isa"
+       people["28ligrossberg@ecfs.org"] = "Luca"
+       people["28bchoppy@ecfs.org"] = "Bryn"
+       people["28wkimafidon@ecfs.org"] = "Walker"
+       people["28cmkanner@ecfs.org"] = "Colten"
+       people["28akapoor@ecfs.org"] = "Aaryan"
+       people["28lckaufman@ecfs.org"] = "Lucas"
+       people["28sekoons@ecfs.org"] = "Scarlet"
+       people["28atkremnev@ecfs.org"] = "Anna"
+       people["28ealin@ecfs.org"] = "Erik"
+       people["28iliu@ecfs.org"] = "Isabella"
+       people["28csnaik@ecfs.org"] = "Camila"
+       people["28sjnewman@ecfs.org"] = "Sol"
+       people["28lanochomovitz@ecfs.org"] = "Lila"
+       people["28bkputs@ecfs.org"] = "Ben"
+       people["28irezbaev@ecfs.org"] = "Bella"
+       people["28wbsamuels@ecfs.org"] = "Warren"
+       people["28svvonmoltke@ecfs.org"] = "Sebastian"
+       people["28mtabrams@ecfs.org"] = "Madelyn"
+        people["28dsalschuler@ecfs.org"] = "Daniel"
+        people["28plbarton@ecfs.org"] = "Pippa"
+        people["28ambernstein@ecfs.org"] = "Asher"
+        people["28bgcalderon@ecfs.org"] = "Bryce"
+        people["28sjcamara@ecfs.org"] = "Sory"
+        people["28bcynn@ecfs.org"] = "Brenton"
+        people["28qcynn@ecfs.org"] = "Quentin"
+        people["28zodaniel@ecfs.org"] = "Zoe"
+        people["28lcdolin@ecfs.org"] = "Lenox"
+        people["28jjgasca@ecfs.org"] = "Javin"
+        people["28tigreenfield@ecfs.org"] = "Talia"
+        people["28pmhults@ecfs.org"] = "Phoebe"
+        people["28msjones@ecfs.org"] = "Mychal"
+        people["28mmkawaja@ecfs.org"] = "Matias"
+        people["28lfloconte@ecfs.org"] = "Luca"
+        people["28lglung@ecfs.org"] = "Lucia"
+        people["28zcnewkirk@ecfs.org"] = "Zola"
+        people["28eeramirez@ecfs.org"] = "Evan"
+        people["28jhsands@ecfs.org"] = "Jared"
+        people["28cmsarraf-mueller@ecfs.org"] = "Camilla"
+        people["28ocsymons@ecfs.org"] = "Olivia"
+        people["28mathompson@ecfs.org"] = "Max"
+        people["28mcworth@ecfs.org"] = "Mason"
+
+        people["29baberke@ecfs.org"] = "Ben"
+        people["29lbilimer@ecfs.org"] = "Leyla"
+        people["29kpcastillo@ecfs.org"] = "Kiara"
+        people["29aldehgan@ecfs.org"] = "Emmy"
+        people["29ldomescik@ecfs.org"] = "Leela"
+        people["29nmdunham@ecfs.org"] = "Nicky"
+        people["29wlfurlonge@ecfs.org"] = "Wyatt"
+        people["29rrharper@ecfs.org"] = "Reese"
+        people["29cbheld@ecfs.org"] = "Chase"
+        people["29fislam@ecfs.org"] = "Farhan"
+        people["29jhmoore@ecfs.org"] = "Jarius"
+        people["29kdnewell@ecfs.org"] = "Kaylah"
+        people["29lnurick@ecfs.org"] = "Liev"
+        people["29gaopler@ecfs.org"] = "Gabriel"
+        people["29jjpapino-wood@ecfs.org"] = "Jai"
+        people["29akpatel@ecfs.org"] = "Aydan"
+        people["29tpollitt@ecfs.org"] = "Theo"
+        people["29alremedios@ecfs.org"] = "Alexandra"
+        people["29wsschneiderman-hordell@ecfs.org"] = "Wynne"
+        people["29lsuleman@ecfs.org"] = "Laeyth"
+        people["29bpvaughan@ecfs.org"] = "Bea"
+        people["29aswright@ecfs.org"] = "Aliza"
+        people["29lgyurman@ecfs.org"] = "Lulu"
+
+
+        people["29amanderson@ecfs.org"] = "Amiah",
+        people["29ebangarita@ecfs.org"] = "Elijah",
+        people["29ajfiroozi@ecfs.org"] = "Alex",
+        people["29ggargano@ecfs.org"] = "Giusi",
+        people["29azgordon@ecfs.org"] = "Asher",
+        people["29nagraham@ecfs.org"] = "Nicholas",
+        people["29ikgreen@ecfs.org"] = "Isabelle",
+        people["29jsgreenberg@ecfs.org"] = "Jack",
+        people["29wrgroves@ecfs.org"] = "Wyatt",
+        people["29himehretu-rankin@ecfs.org"] = "Haile",
+        people["29crouimet@ecfs.org"] = "Cole",
+        people["29jaratchford@ecfs.org"] = "Joshua",
+        people["29mqrenner@ecfs.org"] = "Madeline",
+        people["29orosenblum@ecfs.org"] = "Olivia",
+        people["29esruiz@ecfs.org"] = "Esmé",
+        people["29abschaffer@ecfs.org"] = "Alexis",
+        people["29slschaffer@ecfs.org"] = "Simone",
+        people["29sseren@ecfs.org"] = "Sedef",
+        people["29bdshaftel@ecfs.org"] = "Beckett",
+        people["29rhtassler@ecfs.org"] = "Reese",
+        people["29jdtom@ecfs.org"] = "Justin",
+        people["29djtucker@ecfs.org"] = "Dominic",
+        people["29mdvlassis@ecfs.org"] = "Mira",
+        people["29zjwinley@ecfs.org"] = "Zoe"
+      
+
+      $(document).ready(function() {
+        $("#reveal").hide();
+        for (i = 0; i < emailAddresses.length; i++) {
+          email = emailAddresses[i];
+          var img = $(
+            '<img style="display:none;" onload="update_auto_result(\'' +
+              email +
+              '\');" src="" />'
+          );
+          img.attr(
+            "src",
+            "https://www.google.com/accounts/AccountChooser?Email=" +
+              email +
+              "&continue=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png&followup=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png"
+          );
+          img.appendTo("#imagediv");
+          // img.appendTo('#imagediv');
+        }
+      });
+
+      function loadimage(email, img) {
+        // console.log(email);
+        // console.log($("#email").val());
+        $("#" + img).attr("data-email", email);
+        $("#" + img).attr(
+          "src",
+          "https://www.google.com/accounts/AccountChooser?Email=" +
+            email +
+            "&continue=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png&followup=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png"
+        );
+      }
+
+      function show_result(email, status) {
+        if (email != "") {
+          if (status) {
+            $("#GoogleStatus").html(
+              "You <span class='green'>are</span> currently logged in to <strong>" +
+                email +
+                "</strong>"
+            );
+          } else {
+            $("#GoogleStatus").html(
+              "You <span class='red'>are not</span> currently logged in to <strong>" +
+                email +
+                "</strong>"
+            );
+          }
+        }
+      }
+
+      function update_auto_result(email) {
+        console.log("Match found: " + email);
+        $("#name")[0].innerHTML = people[email];
+      }
+      function reveal() {
+        $("#reveal").show();
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container" style="margin-top:20px">
+      <p class="lead" style="color:red">So now what?</p>
+      <hr class="my-4" />
+      <p>
+        It may seem like we just explored a very small bit of how websites work,
+        but in reality... there's really not that much more to it! Every major
+        website you can think of has been constructed using these very same
+        principles. Much of the development of the web has revolved around
+        taking the things we've looked at until now and think of creative ways
+        to mix and match them together. We'll look at one such... "creative" way
+        right now.
+      </p>
+      <p>
+        <blink><i style="color:red">WARNING:</i></blink> This demo was mildly
+        upsetting to some 5th graders last year, just sayin'...
+      </p>
+      <h1 class="display-4">Demo</h1>
+      <div class="jumbotron">
+        <p class="lead">
+          <center>
+            <button class="btn btn-sm btn-primary" onclick="reveal()">
+              I know who you are. Click here and I'll prove it to you ;-)
+            </button>
+          </center>
+        </p>
+        <div id="reveal">
+          <center>
+            <h1 class="display-4">HELLO</h1>
+            <br />
+            <img
+              src="https://media.giphy.com/media/xUPJPzcdlbvaFUrF7y/giphy.gif"
+              height="300px"
+              width="300px"
+            />
+            <h1 class="display-4">
+              <i id="name">oops I don't actually know who you are...</i>
+            </h1>
+          </center>
+        </div>
+      </div>
+
+      <br /><br />
+      <p class="lead">
+        If you have some time, take a look at
+        <a href="http://webkay.robinlinus.com/">this</a> and
+        <a href="https://amiunique.org/">this.</a>
+      </p>
+    </div>
+    <div id="imagediv" style="display:none;"></div>
+    <img
+      id="img"
+      style="display:none;"
+      data-email=""
+      onload="show_result($(this).attr('data-email'), true);"
+      onerror="show_result($(this).attr('data-email'), false);"
+      src=""
+    />
+  </body>
+</html>

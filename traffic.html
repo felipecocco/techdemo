@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Felipe's wonderful, whimsical, whacky website (about) the web</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function changeJoke() {
+        fetch("https://icanhazdadjoke.com/", {
+          headers: {
+            Accept: "text/plain"
+          }
+        }).then(response => {
+          response.text().then(text => {
+            console.log(text);
+            $("#quote")[0].innerHTML = text;
+          });
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container" style="margin-top:20px">
+      <p class="lead">How do you make pages interactive?</p>
+      <hr class="my-4" />
+      <p>
+        Open any of the last two pages again, and "interact" with them. What
+        happens? Also, take a look at the address bar. What happens there?
+      </p>
+      <p>
+        Now go to your gmail app and "interact" with that page as well. What
+        happens? What happens to the address bar?
+      </p>
+      <h1 class="display-4">Demo</h1>
+      <div class="jumbotron">
+        <p class="lead">
+          Please appreciate the HILARIOUS dad joke below: <br />
+        </p>
+
+        <blockquote class="blockquote text-right">
+          <p class="mb-0">
+            <i id="quote"
+              >I used to be addicted to the hokey pokey, but I turned myself
+              around.</i
+            >
+          </p>
+          <footer class="blockquote-footer">Dad</footer>
+        </blockquote>
+        <button onclick="changeJoke()">I want more!</button>
+      </div>
+
+      <br /><br />
+      <p class="lead">
+        When you're ready to move on, <a href="/persistence.html">click here</a>
+      </p>
+    </div>
+  </body>
+</html>
